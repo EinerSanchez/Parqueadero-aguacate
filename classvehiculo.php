@@ -28,7 +28,7 @@ class Vehiculo extends Cliente {
             'Color' => $this->strColor,
             'HoraIngreso' => $this->strHoraIngreso,
             'Horasalida' => $this->strHoraSalida,
-            'TotalPagar' => $this->intTotalPagar;
+            'TotalPagar' => $this->intTotalPagar
         ];
         return $infoCliente;
     }
