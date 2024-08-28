@@ -13,9 +13,9 @@ class Cliente{
     }
     public function getInfoCliente(){
         $infoCliente = [
-            'Nombres' => $this->strNombres;
-            'Apellidos' => $this->strApellidos;
-            'Documento' => $this->intDocumento;
+            'Nombres' => $this->strNombres,
+            'Apellidos' => $this->strApellidos,
+            'Documento' => $this->intDocumento
         ];
         return $infoCliente;
     }
