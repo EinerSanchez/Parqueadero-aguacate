@@ -2,19 +2,16 @@
 
 class Cliente{
     //propiedades
-    public $strNombres;
-    public $strApellidos;
+    public $strNombre;
     public $intDocumento;
     //metodos
-    public function __construct(string $nombres,string $apellidos,int $documento){
-        $this->$strNombres=$nombres;
-        $this->$strApellidos=$apellidos;
-        $this->$intDocumento=$documento;
+    public function __construct(string $nombre,int $documento){
+        $this->strNombre=$nombre;
+        $this->intDocumento=$documento;
     }
     public function getInfoCliente(){
         $infoCliente = [
-            'Nombres' => $this->strNombres,
-            'Apellidos' => $this->strApellidos,
+            'Nombre' => $this->strNombre,
             'Documento' => $this->intDocumento
         ];
         return $infoCliente;
