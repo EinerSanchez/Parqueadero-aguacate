@@ -3,13 +3,13 @@ require_once("classvehiculo.php");
 
 final class Parqueadero extends Vehiculo {
     //propiedades
-    public $strPisos;
+    public $intPisos= 4;
     public $strEspaciosDisponibles;
     public $intPrecioHora = "$2";
 
 //metodos 
 public function __construct(string $nombres,string $apellidos,int $documento, string $placa, string $color, 
-string $horaingreso, string $horasalida, int $totalpagar, string $pisos, string $espaciosDisponibles){
+string $horaingreso, string $horasalida, int $totalpagar, string $espaciosDisponibles){
 parent::__construct($nombres,$apellidos,$documento,$placa,$color,$horaingreso,$horasalida,$totalpagar)
 
 $this->strPisos= $pisos,
