@@ -13,6 +13,7 @@ final class Parqueadero extends Vehiculo {
         parent::__construct($nombre, $documento, $placa, $marca, $color, $horaIngreso, $horaSalida);
 
         $this->strEspaciosDisponibles = $espaciosDisponibles;
+        $this->intPisos = $pisos;
     }
 
     public function getInfoCliente(){
@@ -28,6 +29,12 @@ final class Parqueadero extends Vehiculo {
             'Piso' => $this->intPisos
         ];
         return $infoCliente;
+    }
+    public function getBuscarVehiculo(){
+        $buscavehiculo =[
+            'Placa' => $this->strPlaca
+        ];
+        return $buscavehiculo;
     }
 }
 ?>

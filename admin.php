@@ -1,19 +1,25 @@
 <?php
 require_once("classParqueadero.php");
-echo "<h2>Buscando Vehiculo Por placa</h2>";
+$pisoAleatorio = rand(1, 4);
+$espacioAleatorio = rand(1, 10);
 
-$parqueadero = new Parqueadero( "Einer Sanchez",1083881788,"SMH-77C","Rojo","Toyota","2022-01-01 10:00:00","2022-01-01 12:00:00","Deja libre Espacio 10",2
+$parqueadero = new Parqueadero( "Einer Sanchez",1083881788,"SMH-77C","Rojo","Toyota","6:00:00","18:00:00",$espacioAleatorio,$pisoAleatorio
 );
+echo "<h2>Buscando Vehiculo Por placa</h2>";
+$buscarVehiculo = $parqueadero->getBuscarVehiculo();
+echo "<pre>";
+print_r($buscarVehiculo);
+echo "</pre>";
 
-
-echo "<h1>Información del cliente y su vehículo</h1>";
+echo "<h2>Vehiculo Encontrado:</h2>";
+echo "<h2>Información del cliente y su vehículo</h2>";
 $infoCliente = $parqueadero->getInfoCliente();
-foreach ($infoCliente as $key => $value) {
-    echo "<strong>$key:</strong> $value<br>";
-}
+echo "<pre>";
+print_r($infoCliente);
+echo "</pre>";
 
 echo "<h2>Valor a pagar:</h2>";
 $valorAPagar = $parqueadero->calcularValorAPagar();
-echo "<strong>Valor a pagar:</strong> $" . number_format($valorAPagar, 2) . "<br>";
+echo "Su valor total a pagar es: $".$valorAPagar;
 
 ?>
